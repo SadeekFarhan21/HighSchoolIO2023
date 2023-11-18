@@ -1,5 +1,6 @@
 import streamlit as st
 from transformers import GPT2LMHeadModel, GPT2Tokenizer
+import torch
 
 def calculate_perplexity(text, model, tokenizer):
     input_ids = tokenizer.encode(text, return_tensors='pt')
